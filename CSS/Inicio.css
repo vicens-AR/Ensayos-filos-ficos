@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Estilos para los enlaces de la navbar */
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+
+  .navbar a:hover {
+    color: #ffdfc4;
+  }
