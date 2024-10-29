@@ -1,0 +1,56 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Estilos para los enlaces de la navbar */
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+
+  .navbar a:hover {
+    color: #ffdfc4;
+  }
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
