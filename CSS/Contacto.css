@@ -27,37 +27,46 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: linear-gradient(90deg, #ff4e50, #f9d423);
-    color: white;
-    font-family: Arial, sans-serif;
+    background-color: #fcda18;
   }
-
-  /* Estilos para los enlaces de la navbar */
-  .navbar a {
-    color: white;
+  
+  .navbar .logo img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.6s;
+  }
+  
+  .navbar .logo img:hover {
+    transform: scale(1.1); /* Animación al pasar el cursor */
+  }
+  
+  .navbar .menu a {
+    color: #000000;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    margin-left: 20px;
+    font-size: 17px;
+    transition: color 0.6s;
   }
-
-  .navbar a:hover {
-    color: #ffdfc4;
+  
+  .navbar .menu a:hover {
+    color: #6e6e6e; /* Cambia el color del texto al pasar el cursor */
+    transform: scale(1.5); /* Animación al pasar el cursor */
   }
-
+  
   .social-icons-container {
     display: flex;
     justify-content: center;
     gap: 30px;
     position: absolute;
-    top: 65%; /* Ajusta la distancia vertical de los iconos */
+    top: 50%; /* Ajusta la distancia vertical de los iconos */
     left: 50%;
     transform: translateX(-50%);
   }
 
   /* Estilos para los iconos de redes sociales */
   .social-icons img {
-    width: 50px; /* Tamaño más pequeño de los iconos */
-    height: 50px;
+    width: 70px; /* Tamaño más pequeño de los iconos */
+    height: 70px;
   }
 
   .top-text {
