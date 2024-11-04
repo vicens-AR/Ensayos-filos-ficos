@@ -1,0 +1,81 @@
+/* Estilos para la imagen de fondo */
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  /* Imagen de fondo ocupando todo el ancho del banner */
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Texto centrado en la imagen */
+  .banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Estilos para los enlaces de la navbar */
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+
+  .navbar a:hover {
+    color: #ffdfc4;
+  }
+
+  .social-icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+    top: 65%; /* Ajusta la distancia vertical de los iconos */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Estilos para los iconos de redes sociales */
+  .social-icons img {
+    width: 50px; /* Tamaño más pequeño de los iconos */
+    height: 50px;
+  }
+
+  .top-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  /* Estilos para el título principal y subtítulos */
+  .h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0 0 10px; /* Espacio debajo del título */
+  }
+  .top-text h3 {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 5px 0; /* Espacio entre subtítulos */
+  }
