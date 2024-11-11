@@ -1,41 +1,19 @@
+/* Fondo de la página */
 body {
     background: linear-gradient(70deg, rgb(0, 0, 0), rgb(255, 217, 2));
+    font-family: 'Arial', sans-serif;
 }
 
-/* Texto */
-.margin {
-    margin-bottom: 30px;
-}
-.pindex, .paboutme {
-    font-size: 25px;
-    margin: 10px;
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-}
-h1 {
-    color: gold;
-    margin: 5px;
-}
-h2 {
-    margin: 10px;
-    color: rgb(88, 164, 235);
-}
-
-/* Navbar */
-.close {
-    justify-content: right !important;
-}
-.offcanvas {
-    background-color: rgb(21, 27, 31) !important;
-}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background-color: #fcda18;
+    position: relative;
   }
   
+  /* Logo */
   .navbar .logo img {
     width: 50px;
     height: 50px;
@@ -44,6 +22,13 @@ h2 {
   
   .navbar .logo img:hover {
     transform: scale(1.1); /* Animación al pasar el cursor */
+  }
+  
+  /* Estilos para el menú */
+  .navbar .menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
   
   .navbar .menu a {
@@ -56,157 +41,208 @@ h2 {
   
   .navbar .menu a:hover {
     color: #6e6e6e; /* Cambia el color del texto al pasar el cursor */
-    transform: scale(1.5); /* Animación al pasar el cursor */
+    transform: scale(1.1); /* Animación al pasar el cursor */
   }
   
-.container-fluid {
-    height: 60px;
-}
-
-/* Imagenes del índice */
-.img-index {
-    max-height: 600px;
-    border-radius: 20px;
-    border-color: black;
-}
-
-/* Navbar-IMG/TXT */
-.red-icons {
-    right: 10px;
-}
-.img-right {
-    position: fixed;
-}
-.text-nav {
-    font-family: 'Taviraj';
-    font-size: 22px;
-}
-
-/* Body Color */
-.color {
-    background-color: rgb(21, 27, 31);
-}
-
-/* Fondo del cuerpo */
-.bg-body {
-    background-color: rgb(21, 27, 31) !important;
-}
-
-/* Estilos responsivos */
-@media (max-width: 991px) {
-    .text-nav {
-        left: 80px;
-    }
-}
-@media (max-width: 768px) {
-    .carousel-padding {
-        margin-top: 50px;
-        max-height: 600px;
-        max-width: 600px;
-    }
-    .form-padding {
-        margin-top: 50px;
-        max-height: 600px;
-        max-width: 600px;
-        width: 300px;
-        height: 340px;
-    }
-    .imgcarousel {
-        max-height: 250px;
-        max-width: 1000px;
-    }
-}
-@media (max-width: 425px) {
-    .img-index {
-        max-height: 400px;
-    }
-}
-@media (max-width: 375px) {
-    .red-icons {
-        display: none !important;
-    }
-    .text-nav {
-        left: 100px;
-    }
-}
-
-/* Efecto de zoom en imágenes */
-.contenedor {
-    overflow: hidden;
-    display: inline-block;
-}
-.contenedor:hover .imagen {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-    transition: transform 0.3s ease;
-}
-
-.container-card{
+  /* Estilos para el icono del menú hamburguesa */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    background-color: #000000;
+    height: 4px;
     width: 100%;
+    border-radius: 5px;
+  }
+
+/* Contenedor de las cartas */
+.container-card {
     display: flex;
-    max-width: 1100px;
-    margin: auto;
-}
-.title-cards{
-    width: 100%;
-    max-width: 1080px;
-    margin: auto;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaciado entre las cartas */
+    justify-content: space-between;
     margin-top: 20px;
-    text-align: center;
-    color: black;
 }
-.card{
-    width: 100%;
-    margin: 20px;
-    border-radius: 6px;
+
+/* Cada tarjeta */
+.card {
+    width: 100%; /* Por defecto, las tarjetas ocupan todo el ancho en pantallas pequeñas */
+    max-width: 350px; /* Limitar el tamaño de las tarjetas */
+    margin: 10px auto; /* Aseguramos que las tarjetas estén centradas */
+    border-radius: 8px;
     overflow: hidden;
-    background:#fff;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
-    transition: all 400ms ease-out;
-    cursor: default;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
-
-.card:hover{
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transform: translateY(-3%);
 }
-.card img{
+
+.card img {
     width: 100%;
-    height: 210px;
+    height: 200px; /* Fijar altura de las imágenes */
+    object-fit: cover;
 }
-.card .contenido-card{
+
+.card .contenido-card {
     padding: 15px;
     text-align: center;
 }
-.card .contenido-card h3{
+
+.card .contenido-card h3 {
+    color: #333;
+    font-size: 1.2rem;
     margin-bottom: 15px;
-    color: #7a7a7a;
 }
-.card .contenido-card p{
-    line-height: 1.8;
-    color: #6a6a6a;
-    font-size: 14px;
-    margin-bottom: 5px;
+
+.card .contenido-card p {
+    line-height: 1.6;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
-.card .contenido-card a{
+
+.card .contenido-card a {
     display: inline-block;
     padding: 10px;
-    margin-top: 10px;
     text-decoration: none;
     color: #ffe600;
     border: 1px solid #ffe600;
     border-radius: 4px;
-    transition: all 400ms ease;
-    margin-bottom: 5px;
+    transition: all 0.3s ease;
 }
-.card .contenido-card a:hover{
+
+.card .contenido-card a:hover {
     background: #ffda08;
-    color: #000000;
+    color: #000;
 }
 
-
+/* Contenedor de los iconos */
 .flex-container {
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.imagen {
+    width: 70px; /* Tamaño estándar de los iconos */
+    height: 70px;
+    transition: transform 0.3s ease; /* Efecto de zoom en los iconos */
+}
+
+.imagen:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos responsivos */
+
+/* En pantallas grandes (mayores a 1024px), las cartas tendrán un ancho de 30% */
+@media (min-width: 1024px) {
+    .container-card {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 30%; /* Tres cartas en fila */
+    }
+
+    .imagen {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* En pantallas medianas (tablet o menos) */
+@media (max-width: 991px) {
+    .container-card {
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 45%; /* Dos cartas en una fila */
+    }
+
+    .imagen {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* En pantallas móviles (menos de 768px) */
+@media (max-width: 768px) {
+    .container-card {
+        flex-direction: column; /* Una carta por fila */
+        gap: 15px; /* Espacio entre las cartas */
+    }
+
+    .card {
+        width: 90%; /* Las cartas ocupan el 90% del ancho de la pantalla */
+        margin: 0 auto; /* Centrar las cartas */
+    }
+
+    .imagen {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* En pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .container-card {
+        flex-direction: column;
+        gap: 10px; /* Reducir el espacio entre las cartas */
+    }
+
+    .card {
+        width: 95%; /* Las cartas ocupan casi todo el ancho */
+    }
+
+    .imagen {
+        width: 50px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+#iconospiolas{
+    padding-bottom: 50px;
+}
+
+#fila1{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#subtitle{
+    padding-top: 50px;
+    color: #f7c14c;
+}
+
+.titulo{
+    padding-top: 50px;
 }

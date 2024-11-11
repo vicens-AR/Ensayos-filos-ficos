@@ -1,90 +1,166 @@
-/* Estilos para la imagen de fondo */
+/* Estilos generales */
+
+/* Banner con imagen de fondo */
 .banner {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 100vh; /* Asegura que el banner ocupe toda la altura de la pantalla */
+  background-image: url('https://www.itr.edu.ar/img/articulos/Cupula2016.jpg'); /* Aquí colocamos la imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-position: center center; /* Centra la imagen dentro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
 
-  /* Imagen de fondo ocupando todo el ancho del banner */
-  .banner img {
-    width: 100%;
-    height: auto;
-  }
+/* Título y texto en el banner */
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
 
-  /* Texto centrado en la imagen */
-  .banner h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3em;
-    font-weight: bold;
-    color: white;
-  }
+.top-text {
+  position: absolute;
+  top: 60%; /* Ajusta la posición de los textos hacia el centro */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
 
+.top-text h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 5px 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fcda18;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* Asegura que la navbar se muestre encima de la imagen de fondo */
+}
+
+.navbar .logo img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.6s;
+}
+
+.navbar .logo img:hover {
+  transform: scale(1.1); /* Animación al pasar el cursor */
+}
+
+.navbar .menu a {
+  color: #000000;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 17px;
+  transition: color 0.6s;
+}
+
+.navbar .menu a:hover {
+  color: #6e6e6e;
+  transform: scale(1.5); /* Animación al pasar el cursor */
+}
+
+/* Social Icons */
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: absolute;
+  top: 75%; /* Ajusta la posición para que estén centrados sobre el banner */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Asegura que los iconos no queden debajo de la imagen */
+}
+
+.social-icons img {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Efecto de aumento al pasar el cursor */
+}
+
+/* Media Queries para dispositivos pequeños (móviles) */
+@media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #fcda18;
+    padding: 10px;
   }
-  
+
   .navbar .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar .menu a {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .banner h1 {
+    font-size: 2em;
+  }
+
+  .top-text h3 {
+    font-size: 1em;
+  }
+
+  .social-icons-container {
+    gap: 20px;
+    top: 80%; /* Ajuste para dispositivos pequeños */
+  }
+
+  .social-icons img {
     width: 50px;
     height: 50px;
-    transition: transform 0.6s;
   }
-  
-  .navbar .logo img:hover {
-    transform: scale(1.1); /* Animación al pasar el cursor */
-  }
-  
-  .navbar .menu a {
-    color: #000000;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 17px;
-    transition: color 0.6s;
-  }
-  
-  .navbar .menu a:hover {
-    color: #6e6e6e; /* Cambia el color del texto al pasar el cursor */
-    transform: scale(1.5); /* Animación al pasar el cursor */
-  }
-  
-  .social-icons-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    position: absolute;
-    top: 50%; /* Ajusta la distancia vertical de los iconos */
-    left: 50%;
-    transform: translateX(-50%);
-  }
+}
 
-  /* Estilos para los iconos de redes sociales */
-  .social-icons img {
-    width: 70px; /* Tamaño más pequeño de los iconos */
-    height: 70px;
-  }
-
+/* Media Queries para dispositivos extra pequeños (móviles en modo retrato) */
+@media (max-width: 480px) {
   .top-text {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    top: 55%; /* Ajusta la posición de los textos */
   }
 
-  /* Estilos para el título principal y subtítulos */
-  .h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin: 0 0 10px; /* Espacio debajo del título */
-  }
   .top-text h3 {
-    font-size: 1.2em;
-    font-weight: normal;
-    margin: 5px 0; /* Espacio entre subtítulos */
+    font-size: 0.9em;
   }
+
+  .navbar .menu a {
+    font-size: 13px;
+  }
+
+  .navbar .logo img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-icons-container {
+    gap: 15px;
+    top: 85%; /* Ajusta para pantallas muy pequeñas */
+  }
+
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+  }
+}
+

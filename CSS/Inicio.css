@@ -6,15 +6,17 @@ body {
   box-sizing: border-box;
 }
 
-/* Barra de navegación */
+/* Estilos básicos para la barra de navegación */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
   background-color: #fcda18;
+  position: relative;
 }
 
+/* Logo */
 .navbar .logo img {
   width: 50px;
   height: 50px;
@@ -23,6 +25,13 @@ body {
 
 .navbar .logo img:hover {
   transform: scale(1.1); /* Animación al pasar el cursor */
+}
+
+/* Estilos para el menú */
+.navbar .menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .navbar .menu a {
@@ -35,7 +44,72 @@ body {
 
 .navbar .menu a:hover {
   color: #6e6e6e; /* Cambia el color del texto al pasar el cursor */
-  transform: scale(1.5); /* Animación al pasar el cursor */
+  transform: scale(1.1); /* Animación al pasar el cursor */
+}
+
+/* Estilos para el icono del menú hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background-color: #000000;
+  height: 4px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .navbar .menu {
+    display: none; /* Ocultar el menú en pantallas pequeñas por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Colocamos el menú debajo de la barra de navegación */
+    left: 0;
+    background-color: #fcda18;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .navbar .menu a {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Mostrar el menú cuando se active el ícono del menú hamburguesa */
+  .navbar.active .menu {
+    display: flex;
+  }
+
+  /* Mostrar el ícono del menú hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Estilos cuando el menú está activo */
+.navbar.active .menu-toggle span {
+  background-color: #6e6e6e; /* Cambiar color del icono cuando se abre el menú */
+}
+
+/* Estilo para el ícono del menú hamburguesa cuando está abierto */
+.navbar.active .menu-toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Rotar la primera línea */
+}
+
+.navbar.active .menu-toggle span:nth-child(2) {
+  opacity: 0; /* Hacer invisible la segunda línea */
+}
+
+.navbar.active .menu-toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px); /* Rotar la tercera línea */
 }
 
 /* Sección de bienvenida */

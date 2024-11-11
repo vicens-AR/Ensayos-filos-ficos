@@ -8,21 +8,27 @@
     <link rel="stylesheet" href="CSS/ensayos.css">
 </head>
 <body>
-    <nav class="navbar">
-      <div class="logo">
+  <nav class="navbar">
+    <div class="logo">
         <img src="https://prensa.renault.com.ar/img/favicon/android-chrome-512x512.png" alt="Logo">
-      </div>
-        <div class="menu">
-            <a href="Index.html">Inicio</a>
-            <a href="ensayos.html">Nuestros Ensayos</a>
-            <a href="Contacto.html">Contacto</a>
-        </div>
-    </nav>
+    </div>
+    <div class="menu" id="menu">
+        <a href="Index.html">Inicio</a>
+        <a href="ensayos.html">Nuestros Ensayos</a>
+        <a href="Contacto.html">Contacto</a>
+    </div>
+    <!-- Icono de menú hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+  </nav>
 
     <main>
         <div class="container-fluid text-center">
             <div class="h2-text row">
-                <h1>6to Programación - Instituto Técnico Renault</h1>
+                <h1 class="titulo">6to Programación - Instituto Técnico Renault</h1>
                 <div class="container-card">
 
                     <div class="card">
@@ -95,9 +101,9 @@
                     </div>
                   </div>
             </div>
-            <div class="container-fluid text-center margin">
-                <h2 class="margin">Nuestras Habilidades</h2>
-                <div class="row margin">
+            <div class="container-fluid text-center margin" id="iconospiolas">
+                <h2 class="margin" id="subtitle">Nuestras Habilidades</h2>
+                <div class="row margin" id="fila1">
                     <div class="col contenedor">
                         <img class="imagen" src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-html-markup-develop-layout-language-512.png" alt="HTML5" width="100" height="100"/>
                     </div>
@@ -105,7 +111,7 @@
                         <img class="imagen" src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-css-style-develop-layout-language-512.png" alt="CSS3" width="100" height="100"/>
                     </div>
                     <div class="col contenedor">
-                        <img class="imagen" src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png" alt="JavaScript" width="100" height="100"/>
+                        <img class="imagen" src="https://cdn4.iconfinder.com/data/icons/proglyphs-computers-and-development/512/Terminal-512.png" alt="JavaScript" width="100" height="100"/>
                     </div>
                     <div class="col contenedor">
                         <img class="imagen" src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-512.png" alt="React" width="100" height="100"/>
@@ -116,7 +122,7 @@
                 </div>
                 <div class="row margin">
                     <div class="col contenedor">
-                        <img class="imagen" src="https://cdn4.iconfinder.com/data/icons/proglyphs-computers-and-development/512/Terminal-512.png" alt="Terminal" width="100" height="100"/>
+                        <img class="imagen" src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png" alt="Terminal" width="100" height="100"/>
                     </div>
                     <div class="col contenedor">
                         <img class="imagen" src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_docker-256.png" alt="Docker" width="100" height="100"/>
@@ -134,5 +140,13 @@
             </div>
         </div>
     </main>
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const navbar = document.querySelector('.navbar');
+      
+      menuToggle.addEventListener('click', () => {
+          navbar.classList.toggle('active');
+      });
+    </script>
 </body>
 </html>

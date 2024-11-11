@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Ensayos filosóficos</title>
     <link rel="stylesheet" href="CSS/Inicio.css">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/046/449/136/non_2x/isolated-plaster-copy-of-michelangelos-david-head-ancient-greek-sculpture-png.png">
 </head>
 <body>
     <!-- Barra de navegación waza-->
     <nav class="navbar">
       <div class="logo">
-        <img src="https://prensa.renault.com.ar/img/favicon/android-chrome-512x512.png" alt="Logo">
+          <img src="https://prensa.renault.com.ar/img/favicon/android-chrome-512x512.png" alt="Logo">
       </div>
-      <div class="menu">
-        <a href="Index.html">Inicio</a>
-        <a href="ensayos.html">Nuestros Ensayos</a>
-        <a href="Contacto.html">Contacto</a>
+      <div class="menu" id="menu">
+          <a href="Index.html">Inicio</a>
+          <a href="ensayos.html">Nuestros Ensayos</a>
+          <a href="Contacto.html">Contacto</a>
+      </div>
+      <!-- Icono de menú hamburguesa -->
+      <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
       </div>
     </nav>
 
@@ -31,5 +38,14 @@
       <p>Un ensayo filosófico es un texto que indaga y examina conceptos, ideas y argumentos vinculados a la filosofía. Este género de ensayo busca profundizar y reflexionar sobre cuestiones fundamentales, que abarcan desde la existencia y el conocimiento hasta la ética y la realidad, entre otros temas cruciales.</p>
       
     </section>
+
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const navbar = document.querySelector('.navbar');
+      
+      menuToggle.addEventListener('click', () => {
+          navbar.classList.toggle('active');
+      });
+    </script>
 </body>
 </html>
