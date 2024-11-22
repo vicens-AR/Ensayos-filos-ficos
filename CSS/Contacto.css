@@ -14,7 +14,7 @@
 /* Título y texto en el banner */
 .banner h1 {
   position: absolute;
-  top: 50%;
+  top: 25%; /* Mueve el texto hacia arriba */
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3em;
@@ -26,13 +26,15 @@
   font-style: bold;
 }
 
+/* Texto adicional en el banner */
 .top-text {
   position: absolute;
-  top: 60%; /* Ajusta la posición de los textos hacia el centro */
+  top: 35%; /* Mueve los textos hacia arriba */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
+
 
 .top-text h3 {
   font-size: 1.2em;
@@ -92,10 +94,10 @@
   justify-content: center;
   gap: 30px;
   position: absolute;
-  top: 75%; /* Ajusta la posición para que estén centrados sobre el banner */
+  top: 50%; /* Mueve los iconos hacia arriba */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10; /* Asegura que los iconos no queden debajo de la imagen */
+  z-index: 10;
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-style: bold;
