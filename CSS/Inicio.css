@@ -1,6 +1,8 @@
 /* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: bold;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
